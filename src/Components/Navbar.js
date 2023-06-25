@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <div className='flex justify-between bg-gray-600 text-white p-2 ' style={{backgroundColor:color.elementColor, color:color.textColor}}>
       <div >
-        <ul className='flex space-x-4 content-center'>
+        <ul className='flex space-x-4 p'>
             <li>Home</li>
             <li>about</li>
             <li>OR</li>
