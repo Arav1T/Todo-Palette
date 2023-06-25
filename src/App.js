@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Navbar from './Components/Navbar';
+import ColorPalette from './Components/ColorPalette';
+import Home from './Components/Home';
+import { useContext } from 'react';
+import { Data } from './context/AllData';
 
 function App() {
+  const {color} = useContext(Data)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div style={{backgroundColor:color.backgroundColor, color:color.textColor}} className='h-screen'>
+      <Navbar />
+      <ColorPalette />
+      <Home />
     </div>
+    </>
   );
 }
 
